@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 2</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 2.</h2>
+      <p>
+        Користувач вводить кількість елементів. Створити масив, у якому перша
+        половина заповнена 1-цями, а друга заповнена 7-ками.
+      </p>
+    </div>
+    <script>
+      //ввести данні
+      const numberOfElements = parseInt(
+        prompt("Введіть кількість елементів", "")
+      );
+      const halfNumberOfElements = Math.ceil(numberOfElements / 2);
+      let arrayOfElements = [];
+      for (let i = 0; i < halfNumberOfElements; i++) {
+        arrayOfElements[i] = 1;
+      }
+      for (let i = halfNumberOfElements; i < numberOfElements; i++) {
+        arrayOfElements[i] = 7;
+      }
+      document.write(`<h3>${arrayOfElements}</h3>`);
+    </script>
+  </body>
+</html>

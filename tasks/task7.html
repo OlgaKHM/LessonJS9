@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 7</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 7.</h2>
+      <p>
+        Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за
+        1000 грн. дати 30% знижки.
+      </p>
+    </div>
+
+    <script>
+      const numberOfElements = parseInt(
+        prompt("Введіть кількість елементів  масиву цін", "")
+      );
+      const minRandomItem = 500;
+      const maxRandomItem = 1500;
+      let arr = [];
+      for (let i = 0; i < numberOfElements; i++) {
+        let randomItem = Math.floor(
+          Math.random() * (maxRandomItem - minRandomItem) + minRandomItem
+        );
+        arr.push(randomItem);
+      }
+      document.write(`<h3> початковий прайс : ${arr}. </р>`);
+
+      arr.forEach((element, index, baseArrRef) => {
+        if (element > 1000) baseArrRef[index] = Math.floor(element * 0.7);
+      });
+      document.write(`<h3>новий прайс : ${arr}. </h3>`);
+    </script>
+  </body>
+</html>

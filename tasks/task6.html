@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 6</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 6.</h2>
+      <p>
+        Дано масив елементів. Усі елементи, які більші за перший елемент
+        помножити на 2.
+      </p>
+    </div>
+    <script>
+      const numberOfElements = parseInt(
+        prompt("Введіть кількість елементів", "")
+      );
+      const minRandomItem = 1;
+      const maxRandomItem = 100;
+      let arr = [];
+      for (let i = 0; i < numberOfElements; i++) {
+        let randomItem = Math.floor(
+          Math.random() * (maxRandomItem - minRandomItem) + minRandomItem
+        );
+        arr.push(randomItem);
+      }
+      document.write(`<h3> масив елементів: ${arr}, </р>`);
+
+      const item1 = arr[0];
+      arr.forEach((element, index, baseArrRef) => {
+        if (element > item1) baseArrRef[index] = element * 2;
+      });
+      document.write(`<h3>новий масив елементів: ${arr}, </h3>`);
+    </script>
+  </body>
+</html>

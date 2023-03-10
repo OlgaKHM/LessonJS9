@@ -1,0 +1,40 @@
+h<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Задача 9</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h2>Задача 9.</h2>
+      <p>Дано масив імен. Сформувати масив з перших літер цих імен.</p>
+    </div>
+    <script>
+      let arrNames = [
+        "Ольга",
+        "Іван",
+        "Наталья",
+        "Дмитро",
+        "Анна",
+        "Сергій",
+        "Катерина",
+        "Василь",
+        "Олена",
+      ];
+      let arrFirstLettersNames = arrNames.map((i) => i[0]);
+      document.write(
+        `<h3>масив з перших літер імен : ${arrFirstLettersNames}. </h3>`
+      );
+    </script>
+  </body>
+</html>
